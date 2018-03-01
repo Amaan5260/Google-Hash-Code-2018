@@ -85,14 +85,6 @@ public class Simulation
             rides.add(r);
         }
         
-        /*Take input file, parse second line onwards and pass values to Ride constructors
-         while(file.hasNextLine)
-        {
-            READ DA LINE OF DA FILE AND PARSE IT INTO DA INDIVIDUAL FILES
-            rides.add(new Ride(PARAMETERS INNIT));
-        }
-
-         */
     }
 
     ArrayList<Vehicle> getVehicle()
