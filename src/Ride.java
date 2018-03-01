@@ -53,5 +53,8 @@ public class Ride {
       return  this.latestFinish;
     }
 
-
+    public double getDistance()
+    {
+        return (abs(startx-finishx) + abs(starty-finishy));
+    }
 }
