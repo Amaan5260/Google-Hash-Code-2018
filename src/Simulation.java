@@ -6,7 +6,6 @@ public class Simulation
     private int rows;
     private int columns;
     private ArrayList<Vehicle> vehicles;
-    private ArrayList<Ride> rides;
     private int bonus;
     private int steps;
     private int currentTime;
@@ -36,6 +35,23 @@ public class Simulation
         //Find the closest available vehicle and assign it to a vehicle
     }
 
+    void checkDest()
+    {
+        for (int x = 0; x < vehicles.size(); x++)
+        {
+            Vehicle vehicleToCheck = vehicles.get(x);
+            for (int i = 0; i < vehicleToCheck.ridesAssigned().size(); i++)
+            {
+                if (vehicleToCheck.getRowPosition == vehicleToCheck.ridesAssigned().get(i).getFinishY() && vehicleToCheck.getColumnPosition() == vehicleToCheck.ridesAssigned().get(i).getFinishX())
+                {
+                    if (vehicleToCheck.ridesAssigned().size() == 0)
+                    {
+                        vehicleToCheck.rideFinished(vehicleToCheck.ridesAssigned().get(i));
+                    }
+                }
+            }
+        }
+    }
     //advanceTime()
     {
     /*First, check if any vehicles are at destinations. Add points to vehicle if applicable and free them.
