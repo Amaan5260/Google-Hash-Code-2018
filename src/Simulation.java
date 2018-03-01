@@ -79,4 +79,19 @@ public class Simulation
     {
         return vehices;
     }
+
+    public int getCurrentTime()
+    {
+        return currentTime;
+    }
+
+    public int getSteps()
+    {
+        return steps;
+    }
+
+    ArrayList getRides
+    {
+        return rides;
+    }
 }
