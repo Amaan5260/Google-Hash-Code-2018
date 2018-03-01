@@ -28,28 +28,30 @@ public class Ride {
       this.earliestStart=0;
       this.latestFinish=0;
     }
-    int getStartX()
+    public int getStartX()
     {
       return this.startx;
     }
-    int getStartY()
+    public int getStartY()
     {
       return this.starty;
     }
-    int getFinishX()
+    public int getFinishX()
     {
      return this.finishx;
     }
-    int getFinishy()
+    public int getFinishy()
     {
       return this.finishy;
     }
-    int getEarliestStart()
+    public int getEarliestStart()
     {
       return this.earliestStart;
     }
-    int getLatestFinish()
+    public int getLatestFinish()
     {
       return  this.latestFinish;
     }
+
+
 }
