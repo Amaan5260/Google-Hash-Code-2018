@@ -36,7 +36,17 @@ public class Simulation
 
     public void assignRide(Ride input)
     {
-        //Find the closest available vehicle and assign it to a vehicle
+        int min = 99999999999999;
+        double dist;
+        Vehicle closest;
+        for (int i = 0; i<vehicles.size(); i++) {
+            dist = Math.abs(vehicles.get(i).getRowPosition()-input.getStartX()) + Math.abs(vehicles.get(i).getColumnPosition()-input.getStartY())
+            if ((dist < min) && (vehicles.get(i).isInRide()==false))  {
+                min = dist;
+                closest = vehicles.get(i);
+            }
+        }
+        closest.inRide = true;
     }
 
     //advanceTime()
