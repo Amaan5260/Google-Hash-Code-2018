@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 import java.math.*;
+import java.lang.Math;
 
 public class Ride {
     private int startx;
@@ -41,7 +42,7 @@ public class Ride {
     {
      return this.finishx;
     }
-    public int getFinishy()
+    public int getFinishY()
     {
       return this.finishy;
     }
@@ -54,8 +55,8 @@ public class Ride {
       return  this.latestFinish;
     }
 
-    public double getDistance()
+    public int getDistance()
     {
-        return (abs(startx-finishx) + abs(starty-finishy));
+        return (Math.abs((getStartX()-getFinishX())) + Math.abs(getFinishY()-getStartY()));
     }
 }
