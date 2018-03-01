@@ -11,7 +11,7 @@ public class Simulation
     private int steps;
     private int currentTime;
 
-    public void Simulation(int inRows, int inColumns, int inFleet, int inRides, int inBonus, int inSteps)
+    public void Simulation(int inRows, int inColumns, int inFleet, int inRides, int inBonus, int inSteps) //input params are passed through file
     {
         int count;
 
@@ -21,17 +21,14 @@ public class Simulation
         steps = inSteps;
         currentTime = 0;
         vehicles = new ArrayList<>();
+        rides = new ArrayList<>();
 
-        for(int count = 0; count < inFleet; count++)
+        for(count = 0; count < inFleet; count++)
         {
             vehicles.add(new Vehicle());
         }
 
-        for(int count = 0; count < inRides; count++)
-        {
-            rides.add(new Ride);
-        }
-        currentTime = 0;
+
     }
 
     public void assignRide(Ride input)
@@ -49,5 +46,21 @@ public class Simulation
     Finally, increment currentTime
      */
     }
-    
+
+    public void readFile()
+    {
+        /*Take input file, parse second line onwards and pass values to Ride constructors
+         while(file.hasNextLine)
+        {
+            READ DA LINE OF DA FILE AND PARSE IT INTO DA INDIVIDUAL FILES
+            rides.add(new Ride(PARAMETERS INNIT));
+        }
+
+         */
+    }
+
+    ArrayList getVehicle()
+    {
+        return vehices;
+    }
 }
