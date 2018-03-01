@@ -24,12 +24,30 @@ public class Simulation
 
         for(int count = 0; count < inFleet; count++)
         {
-            vehicles.add(new Vehicle())
+            vehicles.add(new Vehicle());
         }
 
         for(int count = 0; count < inRides; count++)
         {
-            rides.add(new Ride)
+            rides.add(new Ride);
         }
+        currentTime = 0;
     }
+
+    public void assignRide(Ride input)
+    {
+        //Find the closest available vehicle and assign it to a vehicle
+    }
+
+    //advanceTime()
+    {
+    /*First, check if any vehicles are at destinations. Add points to vehicle if applicable and free them.
+    Then, assign rides to available vehicles. Any vehicles still free after this remain in place.
+    Vehicles moving to pick up or transporting a passenger, move 1 x in direction of destination or 1 y if already at correct x
+    If a vehicle arrives at a pick-up exactly on time, apply bonus
+    Vehicles at pick-up must wait if currentTime < earliest start
+    Finally, increment currentTime
+     */
+    }
+    
 }

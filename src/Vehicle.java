@@ -12,7 +12,7 @@ public class Vehicle
     {
         rowPosition = 0;
         columnPosition = 0;
-        pointsEarned = 0'
+        pointsEarned = 0;
         inRide = false;
     }
 
