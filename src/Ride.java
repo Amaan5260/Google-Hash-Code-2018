@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.math.*;
 import java.lang.Math;
+import java.lang.Boolean;
 
 public class Ride {
     private int startx;
@@ -10,6 +11,7 @@ public class Ride {
     private int finishy;
     private int earliestStart;
     private int latestFinish;
+    private boolean assigned;
 
     public Ride(int startx,int starty,int finishx,int finishy,int earliestStart,int latestFinish)
     {
@@ -54,8 +56,12 @@ public class Ride {
     {
       return  this.latestFinish;
     }
+    public boolean isAssigned()
+    {
+     return assigned;
+    }
 
-    public int getDistance()
+  public int getDistance()
     {
         return (Math.abs((getStartX()-getFinishX())) + Math.abs(getFinishY()-getStartY()));
     }
