@@ -6,6 +6,7 @@ public class Simulation
     private int rows;
     private int columns;
     private ArrayList<Vehicle> vehicles;
+    private ArrayList<Ride> rides;
     private int bonus;
     private int steps;
     private int currentTime;
@@ -75,6 +76,15 @@ public class Simulation
 
     public void readFile()
     {
+        fileIO input = new fileIO("example.in");
+        
+        ArrayList<Integer> l = new ArrayList<>();
+        l = input.parseAttributesKamman;
+        for (int i=0; i<l.size(); i+=6) {
+            Ride r = new Ride(l.get(1), l.get(0), l.get(3), l.get(2), l.get(4), l.get(5));
+            rides.add(r);
+        }
+        
         /*Take input file, parse second line onwards and pass values to Ride constructors
          while(file.hasNextLine)
         {
@@ -85,8 +95,8 @@ public class Simulation
          */
     }
 
-    ArrayList getVehicle()
+    ArrayList<Vehicle> getVehicle()
     {
-        return vehices;
+        return vehicles;
     }
 }
