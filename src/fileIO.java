@@ -29,6 +29,7 @@ class files{
     }
     return intSpecialFirstLine;
   }
+
   public ArrayList<Integer> parseAttributesKamman(){
     if (rideLines.size() == 0){
       throw new ArrayIndexOutOfBoundsException("How weird");
@@ -41,6 +42,25 @@ class files{
       }
     }
     return intRideLines;
+  }
+
+  public void letsWrite(String outputfile, int numberOfCarsInFleet, ArrayList<Vehicle> vehicleArray){
+    vehicleArray = Simulation.getVehicle();
+    Scanner thefile = new Scanner(new File(outputfile));
+    for (int i = 0; i < numberOfCarsInFleet; i++){
+      Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("filename.txt"), "utf-8"));
+      String tempStore = vehicleArray.get(i).rides.toString();
+      tempStore = tempStore.replace("[", "");
+      tempStore = tempStore.replace("]", "");
+      String[] tempStore2 = tempStore.split(",");
+      String toAdd = "";
+      for (int j = 0; j < tempStore2.length; j++){
+        toAdd.concat(tempStore2[j]);
+        toAdd.concat(" ");
+      }
+      writer.write(vehicleArray.get(i).rides.size() + " " + toAdd);
+    }
+    thefile.close();
   }
 }
 public class fileIO{

@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -7,6 +8,7 @@ public class Vehicle
     private int columnPosition;
     private int pointsEarned;
     private boolean inRide;
+    private ArrayList<Ride> rides;
 
     public void Vehicle()
     {
@@ -34,5 +36,16 @@ public class Vehicle
     public boolean isInRide()
     {
         return inRide;
+    }
+
+    public ArrayList<Ride> ridesAssigned()
+    {
+        return rides;
+    }
+
+    public boolean rideFinished(Ride rideFin)
+    {
+        rides.remove(rideFin);
+        this.inRide = false;
     }
 }
